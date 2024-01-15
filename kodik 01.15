@@ -1,0 +1,64 @@
+b=103	
+z=46
+u=138
+
+
+
+#блюда
+ovsanka =  ['Овсяная каша ',127,3,3,24]
+pshenka = ['Пшенная каша ',125,4,2,23]
+borch =['Борщ',58,4,3,4]
+soapchicken =  ['Куриный суп с вермишелью ',63,3,2,8]
+picantnibuter = ['Бутерброд пикантный',316,12,20,21]
+zapekanka =  ['Запеканка из брокколи и цветной капусты ',107,5,8,5]
+golubci =  ['Ленивые голубцы',147,15,50,15]
+
+#списки блюд
+zavtrak =  [ovsanka,pshenka]
+obed1 =[soapchicken,borch]
+obed2 =[picantnibuter]
+poldnic = [zapekanka]
+uzhin = [golubci]
+
+#создание меню
+q = input('хотите создать меню: ')
+if q == 'да'or'yes':
+    print ('выберите блюдо на завтрак')
+    for i in range(len(zavtrak)):
+        print (zavtrak[i][0],': ',i)
+    zav = int(input())
+        
+    print ('выберите первое блюдо на обед')
+    for i in range(len(obed1)):
+        print (obed1[i][0],': ',i)
+    obd1 = int(input())
+    
+    print ('выберите второе блюдо на обед')
+    for i in range(len(obed2)):
+        print (obed2[i][0],': ',i)
+    obd2 = int(input())
+
+    print ('выберите блюдо на полдник')
+    for i in range(len(poldnic)):
+        print (poldnic[i][0],': ',i)
+    pld = int(input())
+    
+    print ('выберите блюдо на ужин')
+    for i in range(len(uzhin)):
+        print (uzhin[i][0],': ',i)
+    uzn = int(input())
+
+
+    print ('Ваше меню:')
+    
+    print ('завтрак: ',zavtrak[zav][0],k*0.25/zavtrak[zav][1]*100//1,'грамм')
+    print ('первое: ',obed1[obd1][0],k*0.15/obed1[obd1][1]*100//1,'грамм')
+    print ('второе: ',obed2[obd2][0],k*0.20/obed2[obd2][1]*100//1,'грамм')   
+    print ('полдник: ',poldnic[pld][0],k*0.15/poldnic[pld][1]*100//1,'грамм')
+    print ('ужин: ',uzhin[uzn][0],k*0.25/uzhin[uzn][1]*100//1,'грамм')
+
+
+    print ('\nбелки: ',k*0.25//zavtrak[zav][1]*zavtrak[zav][2]+k*0.15//obed1[obd1][1]*obed1[obd1][2]+k*0.20//obed2[obd2][1]*obed2[obd2][2]+k*0.15//poldnic[pld][1]*poldnic[pld][2]+k*0.25//uzhin[uzn][1]*uzhin[uzn][2])
+    print ('жиры: ',k*0.25//zavtrak[zav][1]*zavtrak[zav][3]+k*0.15//obed1[obd1][1]*obed1[obd1][2]+k*0.20//obed2[obd2][1]*obed2[obd2][2]+k*0.15//poldnic[pld][1]*poldnic[pld][3]+k*0.25//uzhin[uzn][1]*uzhin[uzn][3])
+    print ('углеводы: ',k*0.25//zavtrak[zav][1]*zavtrak[zav][4]+k*0.15//obed1[obd1][1]*obed1[obd1][2]+k*0.20//obed2[obd2][1]*obed2[obd2][2]+k*0.15//poldnic[pld][1]*poldnic[pld][4]+k*0.25//uzhin[uzn][1]*uzhin[uzn][4])
+
